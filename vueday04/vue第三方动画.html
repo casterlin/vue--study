@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+    
+    <link rel="stylesheet" href="./lib/animate.css">
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="c位杰" @click="flag=!flag">
+        <transition 
+        enter-active-class="zoomIn"
+        leave-active-class="zoomOutDown" 
+        :duration="{enter:2000,leave:1000}">
+            <h1 v-show="flag" class="animated">韩磊老仙</h1>
+        </transition>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                flag:false,
+            },
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+</html>
