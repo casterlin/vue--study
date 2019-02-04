@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p @click='show'>{{msg}}</p>
+    </div>
+    <script>
+        Vue.component('item',{
+            template:'<h2>hello world</h2>'
+        })
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"hello Vue"
+            },
+            methods: {
+                show(){
+                    alert(123)
+                }
+            },
+        })
+    </script>
+</body>
+</html>
